@@ -40,7 +40,7 @@ internal class DebugPage : PreferencePage {
 					context,
 					resources.getString(R.string.channel_other_id)
 			)
-					.setSmallIcon(R.drawable.ic_signals)
+					.setSmallIcon(R.drawable.ic_bike)
 					.setTicker(helloWorld)
 					.setColor(color)
 					.setLights(color, 2000, 5000)

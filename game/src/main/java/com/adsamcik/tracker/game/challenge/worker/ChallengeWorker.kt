@@ -62,7 +62,7 @@ internal class ChallengeWorker(context: Context, workerParams: WorkerParameters)
 							resources.getString(R.string.channel_challenges_id)
 					)
 							.setContentTitle(title)
-							.setSmallIcon(R.drawable.ic_signals)
+							.setSmallIcon(R.drawable.ic_bike)
 							.build()
 			)
 		}

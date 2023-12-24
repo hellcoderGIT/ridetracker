@@ -115,7 +115,7 @@ class TrackerNotificationManager(
 				resources.getString(com.adsamcik.tracker.shared.base.R.string.channel_track_id)
 			)
 				.setVisibility(NotificationCompat.VISIBILITY_PUBLIC)
-				.setSmallIcon(R.drawable.ic_signals) // the done icon
+				.setSmallIcon(R.drawable.ic_bike) // the done icon
 				.setTicker(resources.getString(R.string.notification_tracker_active_ticker)) // the done text
 				.setWhen(Time.nowMillis) // the time stamp
 				.setOngoing(true)

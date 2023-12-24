@@ -63,7 +63,7 @@ class ImportWorker(
 
     private fun createNotification(text: String, inProgress: Boolean): Notification =
         NotificationCompat.Builder(context, context.getString(R.string.channel_other_id))
-            .setSmallIcon(R.drawable.ic_signals)
+            .setSmallIcon(R.drawable.ic_bike)
             .setOngoing(inProgress)
             .setContentTitle(text)
             .build()

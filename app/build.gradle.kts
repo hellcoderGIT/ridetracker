@@ -16,7 +16,7 @@ android {
 	compileSdk = Android.compile
 	buildToolsVersion = Android.buildTools
 	defaultConfig {
-		applicationId = "com.adsamcik.tracker"
+		applicationId = "com.codemozo.ridetracker"
 		minSdk = Android.min
 		targetSdk = Android.target
 		versionCode = 381

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "164710656596",
+    "project_id": "ridetracker-app",
+    "storage_bucket": "ridetracker-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:164710656596:android:60c5568caf9f0517fb9bc1",
+        "android_client_info": {
+          "package_name": "com.codemozo.ridetracker.debug"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAoGBB6lXVVUSTOhygFtFYOVEWupgoVYn0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
