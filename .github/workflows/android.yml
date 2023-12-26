@@ -25,8 +25,7 @@ jobs:
           MAPS_KEY: ${{ secrets.GOOGLE_MAPS_KEY }}
         run: |
           chmod +x gradlew
-          echo "MAPS_API_KEY=${MAPS_KEY}" >> local.properties
-          yes | cp -rf google-services.json.example app/google-services.json
+          echo "MAPS_API_KEY=${MAPS_KEY}" >> local.properties       
         
       - name: Build with Gradle
         run: ./gradlew assembleRelease_nominify
