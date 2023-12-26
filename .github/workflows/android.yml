@@ -15,11 +15,19 @@ jobs:
           distribution: temurin
       - name: Setup Gradle
         uses: gradle/gradle-build-action@v2
-      - name: Prepare for build
+      - name: setup google-services.json          
+        env:
+          GOOGLE_SERVICES_JSON: ${{ secrets.GOOGLE_SERVICES_JSON }}
+        run: |
+          echo "${GOOGLE_SERVICES_JSON}" >> ./app/google-services.json
+      - name: Prepare for build   
+        env: 
+          MAPS_KEY: ${{ secrets.GOOGLE_MAPS_KEY }}
         run: |
           chmod +x gradlew
-          echo "MAPS_API_KEY=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" > local.properties
+          echo "MAPS_API_KEY=${MAPS_KEY}" >> local.properties
           yes | cp -rf google-services.json.example app/google-services.json
+        
       - name: Build with Gradle
         run: ./gradlew assembleRelease_nominify
       - name: Upload build reports
