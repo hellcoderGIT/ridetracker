@@ -22,7 +22,7 @@ jobs:
         run: |
           chmod +x gradlew
           echo "MAPS_API_KEY=${MAPS_KEY}" >> local.properties       
-          echo "${GOOGLE_SERVICES_JSON}" >> ./app/src/google-services.json
+          echo "${GOOGLE_SERVICES_JSON}" >> ./app/google-services.json
       - name: Build with Gradle
         run: ./gradlew assembleRelease_nominify
       - name: Upload build reports
