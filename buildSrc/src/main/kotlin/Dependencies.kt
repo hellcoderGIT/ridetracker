@@ -13,7 +13,7 @@ object Dependencies {
     object Versions {
         const val kotlin: String = "1.9.20"
         const val dokka: String = "0.9.18"
-        const val ksp = "${kotlin}-1.0.13"
+        const val ksp = "${kotlin}-1.0.14"
 
         internal const val constraintLayout = "2.1.4"
         internal const val coreKtx = "1.12.0"
@@ -75,7 +75,7 @@ object Dependencies {
     private fun DependencyHandler.androidTestImplementation(name: String) =
         add("androidTestImplementation", name)
 
-    private fun DependencyHandler.compileOnly(name: String) = add("compileOnly", name)
+    //private fun DependencyHandler.compileOnly(name: String) = add("compileOnly", name)
     private fun DependencyHandler.coreLibraryDesugaring(dependencyNotation: Any) =
         add("coreLibraryDesugaring", dependencyNotation)
 

@@ -2,10 +2,13 @@ import org.jetbrains.dokka.gradle.DokkaTask
 import java.net.URL
 
 plugins {
-	id("com.google.secrets_gradle_plugin") version "0.6.1"
+	//id("com.google.secrets_gradle_plugin") version "0.6.1"
+	id("com.google.android.secrets-gradle-plugin") version "1.1.0"
+	//id("com.google.android.libraries.mapsplatform.secrets-gradle-plugin")
 	id("com.android.application")
 	id("org.jetbrains.dokka-android")
 	id("com.google.android.gms.oss-licenses-plugin")
+
 	Dependencies.corePlugins(this)
 }
 

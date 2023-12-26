@@ -1,30 +1,35 @@
-import java.util.Locale
+//import java.util.Locale
 
 buildscript {
 	repositories {
 		google()
 	}
 	dependencies {
-		classpath("com.android.tools.build:gradle:8.1.2")
+		classpath("com.android.tools.build:gradle:8.2.0")
 		classpath("com.google.gms:google-services:4.4.0")
 		classpath("com.google.android.gms:oss-licenses-plugin:0.10.6")
 		classpath("com.google.firebase:firebase-crashlytics-gradle:${Dependencies.Versions.crashlyticsGradle}")
-
+		//classpath("com.google.android.libraries.mapsplatform.secrets-gradle-plugin:secrets-gradle-plugin:2.0.1")
 		classpath("org.jetbrains.dokka:dokka-android-gradle-plugin:${Dependencies.Versions.dokka}")
 		classpath(kotlin("gradle-plugin", Dependencies.Versions.kotlin))
 	}
 
-	plugins {
-		id("com.google.devtools.ksp") version Dependencies.Versions.ksp apply false
-	}
+
+	//plugins {
+	//	id ("com.google.devtools.ksp") version Dependencies.Versions.ksp apply false
+	//}
+}
+
+plugins {
+	id ("com.google.devtools.ksp") version Dependencies.Versions.ksp apply false
 }
 
 allprojects {
 	repositories {
 		google()
-		maven("https://jitpack.io")
 		mavenCentral()
-		jcenter()
+		maven { url = uri("https://jitpack.io") }
+		/*jcenter()*/
 	}
 	gradle.projectsEvaluated {
 		tasks.withType(JavaCompile::class.java) {
@@ -37,6 +42,7 @@ tasks.register("clean", Delete::class) {
 	delete(rootProject.layout.buildDirectory)
 }
 
+/*
 plugins {
 	// gradlew dependencyUpdates -Drevision=release
 	id("com.github.ben-manes.versions") version ("0.49.0")
@@ -68,4 +74,4 @@ tasks.named(
 			}
 		}
 	}
-}
+}*/
